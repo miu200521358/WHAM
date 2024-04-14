@@ -26,7 +26,7 @@ class SLAMModel(object):
             self.estimate_intrinsics(width, height, calib)
         
         self.dpvo_cfg = osp.join(DPVO_DIR, 'config/default.yaml')
-        self.dpvo_ckpt = osp.join(ROOT_DIR, 'checkpoints', 'dpvo.pth')
+        self.dpvo_ckpt = osp.join(os.getcwd(), 'checkpoints', 'dpvo.pth')
         
         self.buffer = buffer
         self.times = []
