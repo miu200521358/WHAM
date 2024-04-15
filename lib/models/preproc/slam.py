@@ -18,7 +18,7 @@ DPVO_DIR = osp.join(ROOT_DIR, "third-party/DPVO")
 
 
 class SLAMModel(object):
-    def __init__(self, video, output_pth, width, height, calib=None, stride=1, skip=0, buffer=2048):
+    def __init__(self, video, output_pth, width, height, calib=None, stride=1, skip=0, buffer=4096):
         
         if calib == None or not osp.exists(calib): 
             calib = osp.join(output_pth, 'calib.txt')
